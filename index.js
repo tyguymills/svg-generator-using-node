@@ -1,22 +1,39 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const jest = require("jest");
 
-const width = 500;
-const height = 500;
+var width = 0;
+var height = 0;
 const svg = SVG(document.documentElement).size(width, height);
-
-// const readline = require('readline');
-
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
 
 const logomaker = [
     {
         type:"input",
+        message:"what would you like to put on your svg?",
+        name:"text"
+    },
+    {
+        type:"input",
         message:"",
-        
+        name:""
+    },
+    {
+        type:"input",
+        message:"",
+        name:""
+    },
+    {
+        type:"list",
+        message:"what shape do you want your svg?",
+        name:"shape",
+        choices:["triangle", "circle", "square"],
+        filter(value) {
+            return value.toLowerCase();
+    },
+    {
+        type:"input",
+        message:"What color would you like your svg?",
+        name:"svgColor"
     },
 ]
 
@@ -24,11 +41,3 @@ rl.question('What is the name of your logo? ', (name) => {
   console.log(`Generating ${name} logo...`);
 });
 
-rl.question('What is the name of your logo? ', (name) => {
-    console.log(`Generating ${name} logo...`);
-  
-    const rectangle = svg.rect(400, 200).fill('#F44336').move(50, 150);
-    const text = svg.text(name).font({ size: 60 }).fill('#FFFFFF').move(110, 220);
-  
-    const svgString = svg.svg();
-    fs.writeFileSync(`${name}.svg`, svgString);
