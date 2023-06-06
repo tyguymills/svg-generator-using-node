@@ -1,5 +1,5 @@
-![Screenshot](../ChallengeHW/Assets/nodeindex.png)
-![Screenshot](../ChallengeHW/Assets/shape.png)
+![Screenshot](./ChallengeHW/Assets/nodeindex.png)
+![Screenshot](./ChallengeHW/Assets/shape.png)
 
 LogoMaker
 
