@@ -1,5 +1,5 @@
-![plot](../Assets/nodeindex.png)
-![plot](../Assets/shape.png.png)
+![plot](../ChallengeHW/Assets/nodeindex.png)
+![plot](../ChallengeHW/Assets/shape.png)
 
 LogoMaker
 
